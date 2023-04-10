@@ -8,3 +8,13 @@ export type Tasks = {
 };
 
 export type TasksCreate = Omit<Tasks, "id" | "status">;
+
+export type TasksComplete = Omit<
+  Tasks,
+  "id" | "name" | "description" | "day" | "responsible"
+>;
+
+export type TasksResponsible = Omit<
+  Tasks,
+  "id" | "name" | "description" | "day" | "status"
+>;
